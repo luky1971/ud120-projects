@@ -1,0 +1,15 @@
+# 10% feature selector
+no. of Chris training emails: 7936
+no. of Sara training emails: 7884
+3785 features
+training time: 125.8 s
+predicting time: 0.072 s
+accuracy: 0.977815699659
+
+# 1% feature selector
+no. of Chris training emails: 7936
+no. of Sara training emails: 7884
+379 features
+training time: 6.947 s
+predicting time: 0.012 s
+accuracy: 0.967007963595
