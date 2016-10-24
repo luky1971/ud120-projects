@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import operator
 
 def outlierCleaner(predictions, ages, net_worths):
     """
@@ -14,7 +15,10 @@ def outlierCleaner(predictions, ages, net_worths):
     cleaned_data = []
 
     ### your code goes here
+    errors = map(operator.sub, predictions, net_worths)
+    cleaned_data = zip(ages, net_worths, errors)
 
-    
-    return cleaned_data
+    cleaned_data.sort(key=lambda items: items[2]) # sort by error
+
+    return cleaned_data[:int(len(cleaned_data) * 0.9)]
 
